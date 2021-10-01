@@ -28,21 +28,28 @@ public class Solution24 {
             System.out.println("\"" + first + "\"" + " and " + "\"" + second + "\"" + " are not anagrams.");
         }
     }
-    private String getString(){
+    public String getString(){
+        //reads next string and passes back to main
         Scanner sc = new Scanner(System.in);
         return sc.next();
     }
-    private boolean isAnagram(String first, String second) {
+    public boolean isAnagram(String first, String second) {
         boolean status;
+        //remove blank space to read anagram properly
         String s1 = first.replaceAll("\\s", "");
         String s2 = second.replaceAll("\\s", "");
+        //check if string sizes are equal
         if (s1.length() != s2.length()) {
             status = false;
         } else {
+            //set both strings to lowercase to properly read anagram
             char[] ArrayS1 = s1.toLowerCase().toCharArray();
             char[] ArrayS2 = s2.toLowerCase().toCharArray();
+            //sort arrays by value to read anagram properly
             Arrays.sort(ArrayS1);
             Arrays.sort(ArrayS2);
+            //strings should now be equal if anagram: true
+            //otherwise: false
             status = Arrays.equals(ArrayS1, ArrayS2);
         }
         return status;
