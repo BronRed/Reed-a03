@@ -8,5 +8,8 @@ public class Solution29 {
         //use methods in calculator class to get important data
         //use try catch to handle an illegal input EG: denominator 0
         //pass calculated value to main and print result
+        Calculator calc = new Calculator();
+        int years = calc.years;
+        System.out.println("It will take "+ years +" years to double your initial investment.");
     }
 }
