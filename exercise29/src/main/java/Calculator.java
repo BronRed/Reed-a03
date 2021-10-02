@@ -8,9 +8,7 @@ public class Calculator {
     //calculateYears
     //try catch for illegal input EG: denominator 0, alphabetical input
     int returnRate;
-    int years = calculateYears(returnRate);
-
-    public int getReturnRate(int returnRate){
+    public int getReturnRate(){
         Scanner sc = new Scanner(System.in);
         boolean repeat = true;
         System.out.print("What is the rate of return? ");
@@ -36,9 +34,10 @@ public class Calculator {
                 repeat = false;
             } catch (Exception e) {
                 System.out.println("Sorry. That's not a valid input.");
-                returnRate=getReturnRate(returnRate);
+                returnRate=getReturnRate();
             }
         }
         return calcYears;
     }
+
 }

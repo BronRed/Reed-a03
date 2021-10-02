@@ -9,7 +9,8 @@ public class Solution29 {
         //use try catch to handle an illegal input EG: denominator 0
         //pass calculated value to main and print result
         Calculator calc = new Calculator();
-        int years = calc.years;
+        int rate = calc.getReturnRate();
+        int years = calc.calculateYears(rate);
         System.out.println("It will take "+ years +" years to double your initial investment.");
     }
 }
