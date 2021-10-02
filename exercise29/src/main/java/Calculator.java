@@ -4,16 +4,15 @@
  */
 import java.util.Scanner;
 public class Calculator {
-    //getRate
-    //calculateYears
-    //try catch for illegal input EG: denominator 0, alphabetical input
     int returnRate;
+    //getRate
     public int getReturnRate(){
         Scanner sc = new Scanner(System.in);
         boolean repeat = true;
         System.out.print("What is the rate of return? ");
         String tempStr = sc.next();
         while(repeat){
+            //try catch for illegal input EG: denominator 0, alphabetical input
             try{
                 returnRate = Integer.parseInt(tempStr);
                 repeat = false;
@@ -25,10 +24,12 @@ public class Calculator {
         }
         return returnRate;
     }
+    //calculateYears
     public int calculateYears(int returnRate){
         int calcYears=0;
         boolean repeat = true;
         while(repeat){
+            //try catch for illegal input EG: denominator 0, alphabetical input
             try{
                 calcYears = 72 / returnRate;
                 repeat = false;
