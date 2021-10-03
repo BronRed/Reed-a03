@@ -54,10 +54,12 @@ public class NumberGame {
                 correctGuess=true;
             }
             else if(intGuess>secretNumber){
+                //if secret number is less than number "you guessed too high"
                 System.out.print("Too high. ");
                 counter++;
             }
             else{
+                //if secret number is higher than number "you guessed too low"
                 System.out.print("Too low. ");
                 counter++;
             }
@@ -73,14 +75,17 @@ public class NumberGame {
                 intGuess = Integer.parseInt(strGuess);
                 //inside loop take input from user and compare to secret number
                 if(intGuess==secretNumber){
+                    //if secret number = number "you guessed the number in X turns!""do you want to play again?"
                     System.out.println("You got it in "+(counter + 1)+" guesses!");
                     correctGuess=true;
                 }
                 else if(intGuess>secretNumber){
+                    //if secret number is less than number "you guessed too high"
                     System.out.print("Too high. ");
                     counter++;
                 }
                 else{
+                    //if secret number is higher than number "you guessed too low"
                     System.out.print("Too low. ");
                     counter++;
                 }
